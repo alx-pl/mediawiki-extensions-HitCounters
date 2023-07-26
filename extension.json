@@ -3,9 +3,9 @@
 	"namemsg": "hitcounters-extensionname",
 	"version": "0.3.4",
 	"author": [
-		"[//mwstake.org Mark A. Hershberger]"
+		"[//mwstake.org Mark A. Hershberger]", "Alx z PoeWiki"
 	],
-	"url": "https://www.mediawiki.org/wiki/Extension:HitCounters",
+	"url": "https://github.com/alx-pl/mediawiki-extensions-HitCounters/tree/REL1_35",
 	"descriptionmsg": "hitcounters-desc",
 	"type": "variable",
 	"license-name": "GPL-3.0-or-later",
