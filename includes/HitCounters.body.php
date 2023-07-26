@@ -105,6 +105,7 @@ class HitCounters {
 
 	public static function getQueryInfo() {
 		global $wgDBprefix;
+		global $wgShyUsers;
 
 		return [
 			'tables' => [ 'page', 'hit_counter' ],
@@ -116,7 +117,8 @@ class HitCounters {
 			],
 			'conds' => [
 				'page_is_redirect' => 0,
-				'page_namespace' => MWNamespace::getContentNamespaces(),
+				'page_namespace' => MWNamespace::getSubjectNamespaces(),
+				'not page_title' => array_map(fn($value): string => str_replace(" ", "_", $value), $wgShyUsers),
 			],
 			'join_conds' => [
 				'page' => [
